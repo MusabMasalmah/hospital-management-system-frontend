@@ -1,27 +1,232 @@
-# MyApp
+Hospital Management Front-End
+=============================
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Overview
+--------
 
-## Development server
+This is the front-end application for the Hospital Management System, built using Angular, TypeScript, HTML, and CSS. It provides an intuitive user interface for interacting with the backend RESTful APIs to manage hospital-related data, including doctors, patients, medications, specializations, and appointments.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The backend repository can be found [here](https://github.com/yourusername/backend-repo).
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+========================================================================================================================================================================================================================================================================================================================================================================================================================
 
-## Build
+Features
+--------
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+*   **Doctor Management**: View, add, and update doctor information, including assigning specializations.
+*   **Patient Management**: Manage patient data, assign doctors and medications, and update patient records.
+*   **Medication Management**: View and manage available medications.
+*   **Specialization Management**: Manage and view specializations.
+*   **Appointment Management**: Schedule, view, and update appointments.
+*   **Responsive Design**: Adaptable to different screen sizes for usability across devices.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
-## Running end-to-end tests
+Technology Stack
+----------------
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+*   **Frontend Framework**: Angular
+*   **Language**: TypeScript, HTML5, CSS3
+*   **UI Components**: Angular Material (if used)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+===================================================================================================================================
+
+Video Demonstration
+-------------------
+
+To better understand the functionality and user experience, please watch the video demonstration:
+
+
+=====================================================================================================
+
+Installation
+------------
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+*   Node.js (v14 or later)
+*   Angular CLI (v12 or later)
+
+
+=======================================================================================================
+
+### Setup
+
+1.  Clone the repository:
+    
+    bash
+    
+    Copy code
+    
+    `git clone https://github.com/MusabMasalmah/hospital-management-system-frontend.git
+    cd hospital-management-system-frontend` 
+    
+2.  Install the dependencies:
+    
+    bash
+    
+    Copy code
+    
+    `npm install` 
+    
+3.  Set up environment variables to connect with the backend API. This can be done in the `src/environments/environment.ts` file:
+    
+    typescript
+    
+    Copy code
+    
+    `export const environment = {
+      production: false,
+      apiUrl: 'http://localhost:8080'  // Replace with the actual backend URL
+    };` 
+    
+4.  Start the application:
+    
+    bash
+    
+    Copy code
+    
+    `ng serve` 
+    
+    Open your browser and navigate to `http://localhost:4200/` to interact with the application.
+    
+
+
+==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+Project Structure
+-----------------
+
+*   **`src/app`**: Main application files, including components, services, and modules.
+*   **`src/assets`**: Static assets such as images, fonts, etc.
+*   **`src/styles`**: Global styles used across the application.
+*   **`src/environments`**: Environment-specific configurations.
+
+
+=============================================================================================================================================================================================================================================================================================
+
+API Integration
+---------------
+
+This front-end application communicates with the backend RESTful APIs for data management. For detailed API documentation, refer to the backend project [here](https://github.com/yourusername/backend-repo).
+
+
+=================================================================================================================================================================================================================
+
+### Example API Integration
+
+Here’s how a service in this project interacts with the backend API:
+
+typescript
+
+Copy code
+
+``import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DoctorService {
+  private apiUrl = `${environment.apiUrl}/Doctor`;
+
+  constructor(private http: HttpClient) {}
+
+  getAllDoctors(): Observable {
+    return this.http.get(this.apiUrl);
+  }
+
+  addDoctor(doctor: Doctor): Observable {
+    return this.http.post(this.apiUrl, doctor);
+  }
+
+  updateDoctor(doctorId: number, doctor: Doctor): Observable {
+    return this.http.put(`${this.apiUrl}/${doctorId}`, doctor);
+  }
+}`` 
+
+
+
+
+
+
+==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+Deployment
+----------
+
+To build the application for production:
+
+bash
+
+Copy code
+
+`ng build --prod` 
+
+The build artifacts will be stored in the `dist/` directory. You can deploy these files to any web server.
+
+
+=============================================================================================================================================================================================
+
+Contributing
+------------
+
+If you would like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcomed.
+
+
+============================================================================================================================
+
+### Steps to Contribute:
+
+1.  Fork the repository.
+2.  Create a new branch:
+    
+    bash
+    
+    Copy code
+    
+    `git checkout -b feature-branch` 
+    
+3.  Commit your changes:
+    
+    bash
+    
+    Copy code
+    
+    `git commit -am 'Add new feature'` 
+    
+4.  Push to the branch:
+    
+    bash
+    
+    Copy code
+    
+    `git push origin feature-branch` 
+    
+5.  Create a Pull Request.
+
+
+======================================================================================================================================================================================================================================================================================================================================================================================
+
+License
+-------
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+=================================================================================================
+
+Contact
+-------
+
+For any inquiries or issues, please contact musabsoos10@gmail.com.
+
+
+======================================================================
