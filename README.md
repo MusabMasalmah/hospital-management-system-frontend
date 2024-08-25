@@ -29,10 +29,48 @@ Technology Stack
 
 
 
-Video Demonstration
+Some Testing
 -------------------
 
-To better understand the functionality and user experience, please watch the video demonstration:
+<details>
+  <summary>Click to see testing</summary>
+
+  ![image](https://github.com/user-attachments/assets/aaa97469-3321-4778-8c1f-70b167cfeecc)
+
+  ![image](https://github.com/user-attachments/assets/0c224a40-a180-41a3-9b55-14bffa91b7a0)
+
+  ![image](https://github.com/user-attachments/assets/334c210a-9649-4028-896a-49f1bd7bc117)
+
+  ![image](https://github.com/user-attachments/assets/2c57fbd7-754e-4654-bf8a-a54c7c700bc7)
+
+  ![image](https://github.com/user-attachments/assets/5c8a1670-e6d7-4098-b855-aa0d9b8ed94a)
+
+  ![image](https://github.com/user-attachments/assets/098a37a8-e0cc-4214-b4c9-2ce19dbf8dac)
+
+  ![image](https://github.com/user-attachments/assets/85c54d8b-4554-44b4-96d7-06c27ea0cbd7)
+
+  ![image](https://github.com/user-attachments/assets/a3e1b3c0-7ddd-483c-9576-665917fe39a1)
+
+  ![image](https://github.com/user-attachments/assets/d2d88555-23e5-40bd-a4ff-943fbc8539f6)
+
+  ![image](https://github.com/user-attachments/assets/ec4bbba5-fa77-420d-b5b4-f9416680bc91)
+
+  ![image](https://github.com/user-attachments/assets/6dc87ecc-09c4-47bf-81c0-d3a4d134ccc4)
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</details>
 
 
 
