@@ -1,0 +1,21 @@
+<app-add-patient></app-add-patient>
+<hr>
+<h2>Patients Informations</h2>
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="filterPatients()"
+    placeholder="Search by name"
+  />
+</div>
+
+<div class="card-container">
+  <app-patient-card
+    *ngFor="let patient of filteredPatients"
+    [patient]="patient"
+    (delete)="onDeletePatient($event)"
+    (update)="onUpdatePatient($event)"
+    (addMed)="onAssignMedication($event)"
+  ></app-patient-card>
+</div>    

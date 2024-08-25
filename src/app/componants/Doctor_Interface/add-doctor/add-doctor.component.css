@@ -1,0 +1,87 @@
+/* General form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 30px auto; /* More space from top for better centering */
+  padding: 25px; /* Slightly increased padding for more spacious feel */
+  background-color: #ffffff; /* Lighter background for a clean look */
+  border: 1px solid #e0e0e0; /* Softer border color for a subtle look */
+  border-radius: 10px; /* More rounded corners for a modern appearance */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for better emphasis */
+}
+
+/* Space between form elements */
+div {
+  margin-bottom: 25px; /* More space between fields for better readability */
+}
+
+/* Label styling */
+label {
+  font-weight: bold;
+  display: block; /* Makes label take up full width of container */
+  margin-bottom: 8px; /* Slightly more space below the label */
+  color: #555; /* Darker color for better contrast */
+}
+
+/* Input and textarea styling */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%; /* Ensure elements take full width of the form */
+  padding: 14px; /* More padding for improved user interaction */
+  border: 1px solid #ddd; /* Light border for a softer look */
+  border-radius: 8px; /* Rounded corners for inputs */
+  box-sizing: border-box; /* Ensures padding doesn't affect total width */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Textarea specific styling */
+textarea {
+  resize: vertical; /* Allows resizing vertically only */
+  min-height: 130px; /* More height for better content visibility */
+}
+
+/* Button styling */
+button {
+  background-color: #0b0b0b;
+  color: #fff;
+  padding: 14px 22px; /* Larger padding for a more prominent button */
+  border: none;
+  border-radius: 8px; /* Rounded corners for the button */
+  cursor: pointer;
+  font-size: 16px; /* Larger font size for readability */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+button:hover {
+  background-color: #535353;
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+button:active {
+  background-color: #004494; /* Darker shade on click */
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+/* Error message styling */
+.error {
+  color: #d9534f; /* Slightly different red for better visibility */
+  font-size: 14px;
+  margin-top: 8px; /* More space above the error message */
+}
+
+/* Heading styling */
+h2 {
+  text-align: center;
+  margin-bottom: 25px; /* More space below the heading */
+  font-size: 26px; /* Larger font size for emphasis */
+  color: #333; /* Darker color for contrast */
+}

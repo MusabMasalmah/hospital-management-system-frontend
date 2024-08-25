@@ -1,0 +1,30 @@
+<h2>Add a New Doctor</h2>
+
+<form (ngSubmit)="addDoctor()">
+  <div>
+    <label for="name">Doctor Name:</label>
+    <input
+      type="text"
+      id="name"
+      [(ngModel)]="doctor.name"
+      name="name"
+      #name="ngModel"
+      required
+      minlength="4"
+      pattern="^[A-Za-z\s.]+$"
+    /> 
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">
+      <div *ngIf="name.errors?.['required']">
+        Doctor Name is required.
+      </div>
+      <div *ngIf="name.errors?.['minlength']">
+        Doctor Name must be at least 4 characters long.
+      </div>
+      <div *ngIf="name.errors?.['pattern']">
+        Doctor Name must only contain letters and spaces.
+      </div>
+    </div>
+  </div>
+
+  <button type="submit">Save Doctor</button>
+</form>  

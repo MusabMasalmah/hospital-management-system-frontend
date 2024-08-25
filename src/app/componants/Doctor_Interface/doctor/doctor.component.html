@@ -1,0 +1,32 @@
+<app-add-doctor></app-add-doctor>
+<hr>
+<h2>Doctors Informations</h2>
+<!-- Search Bar -->
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="filterDoctors()"
+    placeholder="Search by name or ID"
+  />
+</div>
+
+<div class="card-container">
+  <app-doctor-card
+    *ngFor="let doctor of filteredDoctors"
+    [doctor]="doctor"
+    (delete)="onDeleteDoctor($event)"
+    (update)="onUpdateSpecialization($event)"
+  ></app-doctor-card>
+</div>  
+
+<!-- Pagination Controls -->
+<div class="pagination-controls" *ngIf="totalPages > 1">
+  <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 0">Previous</button>
+
+  <span *ngFor="let pageNumber of [].constructor(totalPages); let i = index">
+    <button (click)="changePage(i)" [class.active]="i === currentPage">{{ i + 1 }}</button>
+  </span>
+
+  <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages - 1">Next</button>
+</div>

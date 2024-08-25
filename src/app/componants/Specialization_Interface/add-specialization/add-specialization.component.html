@@ -1,0 +1,31 @@
+<h2>Add a New Specialization</h2>
+
+<form (ngSubmit)="addSpec()" #specializationForm="ngForm">
+  <div>
+    <label for="name">Specialization Name:</label>
+    <input 
+      type="text"
+      id="name"
+      [(ngModel)]="spec.name"
+      name="name"
+      #name="ngModel"
+      required
+      minlength="4"
+      pattern="^[A-Za-z\s.]+$"
+    >
+    
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">
+      <div *ngIf="name.errors?.['required']">
+        Specialization Name is required.
+      </div>
+      <div *ngIf="name.errors?.['minlength']">
+        Specialization Name must be at least 4 characters long.
+      </div>
+      <div *ngIf="name.errors?.['pattern']">
+        Specialization Name must only contain letters and spaces.
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="specializationForm.invalid">Save Specialization</button>
+</form>

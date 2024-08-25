@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="details" *ngIf="!isEditing">
+    <h3 class="id">Doctor ID: {{appointment.doctorID}}</h3>
+    <h3 class="id">Patient ID: {{appointment.patientID}}</h3>
+    <p class="date">Date: {{appointment.appointmentDate | date: 'yyyy-MM-dd'}}</p>
+    <p class="reason">Reason: {{appointment.reason}}</p>
+  </div>
+
+  <div class="edit-form" *ngIf="isEditing">
+    <label for="date">Date:</label>
+    <input type="date" [(ngModel)]="appointment.appointmentDate" id="date" />
+    <label for="reason">Reason:</label>
+    <input type="text" [(ngModel)]="appointment.reason" id="reason" />
+    <button type="button" class="btn btn-save" (click)="onSave()">Save</button>
+  </div>
+
+  <div class="buttons">
+    <button type="button" class="btn btn-edit" (click)="onEdit()">Edit</button>
+    <button type="button" class="btn btn-delete delBtn" (click)="onDelete()">Delete</button>
+  </div>
+</div>

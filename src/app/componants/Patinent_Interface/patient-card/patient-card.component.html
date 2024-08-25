@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="details" *ngIf="!isEditing">
+    <h3 class="id">ID: {{ patient.id }}</h3>
+    <p class="name">Name: {{ patient.name }}</p>
+    <p class="medications">Medications:</p>
+    <ul>
+      <li *ngFor="let medicationId of patient.medicationIds; let isLast = last">
+        <a href="/medication">{{ medicationId }}</a>
+      </li>
+      <li *ngIf="patient.medicationIds?.length === 0">
+        No Medications
+      </li>
+    </ul>
+  </div>
+  
+
+  <div class="edit-form" *ngIf="isEditing">
+    <label for="name">Name:</label>
+    <input type="text" [(ngModel)]="patient.name" id="name" />
+
+    <button type="button" class="btn" (click)="onSave()">Done</button>
+  </div>
+
+  <div class="edit-form" *ngIf="isAddingMed">
+    <label for="name">Medication ID:</label>
+    <input type="text"  [(ngModel)]="medId" id="medID" />
+
+    <button type="button" class="btn" (click)="onSaveMed()">Done</button>
+  </div>
+
+  <div class="buttons">
+    <button type="button" class="btn" (click)="onAddMed()">+ Medication</button>
+    <button type="button" class="btn" (click)="onEdit()">Update</button>
+    <button type="button" class="btn delBtn" (click)="onDelete()">Delete</button>
+  </div>
+</div>

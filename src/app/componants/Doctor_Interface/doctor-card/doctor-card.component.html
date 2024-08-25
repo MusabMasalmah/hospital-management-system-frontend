@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="details" *ngIf="!isEditing">
+      <h3 class="id">ID: {{doctor.id}}</h3>
+      <p class="name">Name: {{doctor.name}}</p>
+     <a href="/specialization"> <p  class="name">Specilaization: {{doctor.specializationID}}</p></a>
+    </div>
+
+    <div class="edit-form" *ngIf="isEditing">
+      <label for="name">Name:</label>
+      <input type="text" [(ngModel)]="doctor.name" id="name" />
+      <select id="specID" [(ngModel)]="doctor.specializationID" name="specID" required>
+        <option *ngFor="let spec of specs" [value]="spec.id">
+          {{ spec.id }} - {{ spec.name }}
+        </option>
+      </select>
+      <button type="button" class="btn" (click)="onSave()">Done</button>
+    </div>
+
+    <div class="buttons">
+    <button type="button" class="btn" (click)="onEdit()">Update</button>
+    <button type="button" class="btn delBtn" (click)="onDelete()">Delete</button>
+  </div>
+</div>   

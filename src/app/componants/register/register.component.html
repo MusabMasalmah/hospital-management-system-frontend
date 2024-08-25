@@ -1,0 +1,56 @@
+<main class="container">
+  <h2>Register</h2>
+  <form (ngSubmit)="onRegister()">
+    <div class="input-field">
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        [(ngModel)]="firstName"
+        placeholder="Enter Your First Name"
+        required
+      />
+      <div class="underline"></div>
+    </div>
+    <div class="input-field">
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        [(ngModel)]="lastName"
+        placeholder="Enter Your Last Name"
+        required
+      />
+      <div class="underline"></div>
+    </div>
+    <div class="input-field">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        [(ngModel)]="email"
+        placeholder="Enter Your Email"
+        required
+      />
+      <div class="underline"></div>
+    </div>
+    <div class="input-field">
+      <input
+        type="password"
+        name="password"
+        id="password"
+        [(ngModel)]="password"
+        placeholder="Enter Your Password"
+        required
+      />
+      <div class="underline"></div>
+    </div>
+
+    <input type="submit" value="Register" />
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+    <div class="back-to-login">
+      <p>Already have an account? <a href="/login">Login Here</a></p>
+    </div>
+  </form>
+</main>

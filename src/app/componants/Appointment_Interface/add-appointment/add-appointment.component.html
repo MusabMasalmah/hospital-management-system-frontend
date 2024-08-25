@@ -1,0 +1,33 @@
+<h2>Add a New Appointment</h2>
+
+<form (ngSubmit)="addAppointment()">
+  <div class="form-group"> 
+    <label for="doctorID">Doctor:</label>
+    <select id="doctorID" [(ngModel)]="appointment.doctorID" name="doctorID" required>
+      <option *ngFor="let doctor of doctors" [value]="doctor.id">
+        {{ doctor.id }} - {{ doctor.name }}
+      </option>
+    </select>
+  </div> 
+
+  <div class="form-group">
+    <label for="patientID">Patient:</label>
+    <select id="patientID" [(ngModel)]="appointment.patientID" name="patientID" required>
+      <option *ngFor="let patient of patients" [value]="patient.id">
+        {{ patient.id }} - {{ patient.name }}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="Date">Date:</label>
+    <input type="text" id="Date" [(ngModel)]="appointment.appointmentDate" name="Date" required>
+  </div>
+
+  <div class="form-group">
+    <label for="Reason">Reason:</label>
+    <textarea id="Reason" [(ngModel)]="appointment.reason" name="Reason" rows="4" required></textarea>
+  </div>
+
+  <button type="submit">Schedule Appointment</button>
+</form>

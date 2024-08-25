@@ -1,0 +1,21 @@
+<app-add-specialization></app-add-specialization>
+<hr>
+<h2>Specalizations Informations</h2>
+<!-- Search Bar -->
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="filterSpecializations()"
+    placeholder="Search by name"
+    class="search-input"
+  />
+</div>
+<div class="card-container">
+  <app-specalization-card
+    *ngFor="let spec of filteredSpecs"
+    [spec]="spec"
+    (delete)="onDeleteSpecialization($event)"
+    (update)="onUpdateSpecialization($event)"
+  ></app-specalization-card>
+</div>

@@ -1,0 +1,21 @@
+<app-add-medication></app-add-medication>
+<hr>
+<h2>Medications Informations</h2>
+<!-- Search Bar -->
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="filterMedications()"
+    placeholder="Search by name"
+  />
+</div>
+
+<div class="card-container">
+  <app-medication-card
+    *ngFor="let medication of filteredMedications"
+    [medication]="medication"
+    (delete)="onDeleteMedication($event)"
+    (update)="onUpdateMedication($event)"
+  ></app-medication-card>
+</div>   

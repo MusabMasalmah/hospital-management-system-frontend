@@ -1,0 +1,21 @@
+<app-add-appointment></app-add-appointment>
+<hr>
+<h2>Appointment Informations</h2>
+<!-- Search Bar -->
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="filterAppointments()"
+    placeholder="Search by reason"
+  />
+</div>
+
+<div class="card-container">
+  <app-appointment-card
+    *ngFor="let appointment of filteredAppointments"
+    [appointment]="appointment"
+    (delete)="onDeleteAppointment($event)"
+    (update)="onUpdateAppointment($event)"
+  ></app-appointment-card>
+</div>    

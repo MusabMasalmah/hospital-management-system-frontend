@@ -1,0 +1,17 @@
+<h2>Add a New Medication</h2>
+
+<form (ngSubmit)="addMedication()">
+  <div>
+    <label for="name">Medication Name:</label>
+    <input 
+      type="text" 
+      id="name" 
+      [(ngModel)]="medication.name" 
+      name="name" required
+      minlength="4"
+      pattern="^[A-Za-z\s.]+$"
+      >
+  </div>
+
+  <button type="submit">Save Medication</button>
+</form>  
