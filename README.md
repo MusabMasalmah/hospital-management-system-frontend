@@ -6,10 +6,8 @@ Overview
 
 This is the front-end application for the Hospital Management System, built using Angular, TypeScript, HTML, and CSS. It provides an intuitive user interface for interacting with the backend RESTful APIs to manage hospital-related data, including doctors, patients, medications, specializations, and appointments.
 
-The backend repository can be found [here](https://github.com/yourusername/backend-repo).
+The backend repository can be found [here](https://github.com/MusabMasalmah/Hospital-Management-APIs.git).
 
-
-========================================================================================================================================================================================================================================================================================================================================================================================================================
 
 Features
 --------
@@ -22,17 +20,14 @@ Features
 *   **Responsive Design**: Adaptable to different screen sizes for usability across devices.
 
 
-==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
-
 Technology Stack
 ----------------
 
 *   **Frontend Framework**: Angular
 *   **Language**: TypeScript, HTML5, CSS3
-*   **UI Components**: Angular Material (if used)
+*   **UI Components**: Angular Material 
 
 
-===================================================================================================================================
 
 Video Demonstration
 -------------------
@@ -40,7 +35,6 @@ Video Demonstration
 To better understand the functionality and user experience, please watch the video demonstration:
 
 
-=====================================================================================================
 
 Installation
 ------------
@@ -53,7 +47,6 @@ Ensure you have the following installed:
 *   Angular CLI (v12 or later)
 
 
-=======================================================================================================
 
 ### Setup
 
@@ -97,7 +90,6 @@ Ensure you have the following installed:
     
 
 
-==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 Project Structure
 -----------------
@@ -108,80 +100,22 @@ Project Structure
 *   **`src/environments`**: Environment-specific configurations.
 
 
-=============================================================================================================================================================================================================================================================================================
+
 
 API Integration
 ---------------
 
-This front-end application communicates with the backend RESTful APIs for data management. For detailed API documentation, refer to the backend project [here](https://github.com/yourusername/backend-repo).
-
-
-=================================================================================================================================================================================================================
-
-### Example API Integration
-
-Here’s how a service in this project interacts with the backend API:
-
-typescript
-
-Copy code
-
-``import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { environment } from '../environments/environment';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class DoctorService {
-  private apiUrl = `${environment.apiUrl}/Doctor`;
-
-  constructor(private http: HttpClient) {}
-
-  getAllDoctors(): Observable {
-    return this.http.get(this.apiUrl);
-  }
-
-  addDoctor(doctor: Doctor): Observable {
-    return this.http.post(this.apiUrl, doctor);
-  }
-
-  updateDoctor(doctorId: number, doctor: Doctor): Observable {
-    return this.http.put(`${this.apiUrl}/${doctorId}`, doctor);
-  }
-}`` 
+This front-end application communicates with the backend RESTful APIs for data management. For detailed API documentation, refer to the backend project [here](https://github.com/MusabMasalmah/Hospital-Management-APIs.git).
 
 
 
 
-
-
-==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
-
-Deployment
-----------
-
-To build the application for production:
-
-bash
-
-Copy code
-
-`ng build --prod` 
-
-The build artifacts will be stored in the `dist/` directory. You can deploy these files to any web server.
-
-
-=============================================================================================================================================================================================
 
 Contributing
 ------------
 
 If you would like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcomed.
 
-
-============================================================================================================================
 
 ### Steps to Contribute:
 
@@ -213,20 +147,19 @@ If you would like to contribute, please fork the repository and use a feature br
 5.  Create a Pull Request.
 
 
-======================================================================================================================================================================================================================================================================================================================================================================================
 
 License
 -------
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Copyright (c) 2024 Musab Masalmah
 
 
-=================================================================================================
+
 
 Contact
 -------
 
-For any inquiries or issues, please contact musabsoos10@gmail.com.
+For any inquiries or issues, please contact [musabsoos10@gmail.com](musabsoos10@gmail.com).
 
 
-======================================================================
+
